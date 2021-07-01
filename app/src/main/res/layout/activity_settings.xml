@@ -6,24 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-    <ImageButton
-        android:id="@+id/bt_exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="36dp"
         android:text="Settings"
-        app:layout_constraintEnd_toStartOf="@+id/bt_exit"
-        app:layout_constraintHorizontal_bias="0.627"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,24 +22,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="77dp"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="32dp"
         android:text="Switch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tx_notif"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintVertical_bias="0.176" />
 
     <Switch
         android:id="@+id/sw_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="52dp"
         android:text="Switch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sw_notif"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.109" />
 
     <TextView
         android:id="@+id/tx_notif"
@@ -58,6 +48,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginBottom="591dp"
         android:text="Notifications"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sw_notif"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,9 +58,10 @@
         android:id="@+id/tx_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="124dp"
         android:text="Email"
+        android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/sw_email"
         app:layout_constraintTop_toBottomOf="@+id/tx_notif" />
 
@@ -79,23 +71,24 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:text="Days Before Reminder"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/edtx_days"
         app:layout_constraintTop_toBottomOf="@+id/tx_email"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintVertical_bias="0.124" />
 
     <EditText
         android:id="@+id/edtx_days"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_width="106dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Days"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sw_email"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <Button
         android:id="@+id/bt_email"
@@ -104,10 +97,9 @@
         android:text="Email Log In"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="0.582" />
 
     <Button
         android:id="@+id/bt_canvas"
@@ -116,7 +108,21 @@
         android:text="Canvas Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_email" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_email"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <Button
+        android:id="@+id/bt_exit"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="25dp"
+        android:text="X"
+        app:backgroundTint="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
