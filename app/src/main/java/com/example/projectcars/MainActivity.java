@@ -3,12 +3,14 @@ package com.example.projectcars;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     private TextView mDisplayDate;
+    private Button addAssignment;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
 
@@ -58,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: date; " + month + "/" + dayOfMonth + "/" + year);
             }
         };
+
+        addAssignment = findViewById(R.id.add);
+        addAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentListAssignments = new Intent(MainActivity.this, Assignments.class);
+                MainActivity.this.startActivity(intentListAssignments);
+            }
+        });
+
 
     }
 }
