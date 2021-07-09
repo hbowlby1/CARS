@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         addAssignment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentListAssignments = new Intent(MainActivity.this, Assignments.class);
+                Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
                 MainActivity.this.startActivity(intentListAssignments);
             }
         });

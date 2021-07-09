@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectCars">
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".AssignmentsList"></activity>
+        <activity android:name=".Settings" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

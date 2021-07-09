@@ -21,7 +21,7 @@ public class Settings extends AppCompatActivity {
         btn_exit.setOnClickListener(v -> {
             Intent goToHome;
             goToHome = new Intent(Settings.this,
-                    Assignments.class);
+                    AssignmentsList.class);
             startActivity(goToHome);
         });
 
