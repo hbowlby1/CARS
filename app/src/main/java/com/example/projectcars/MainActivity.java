@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -20,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private TextView mDisplayDate;
-    private Button addAssignment;
+    TextView mDisplayDate;
+    EditText name;
+    Button addAssignment;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
 
@@ -62,12 +64,16 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        name = findViewById(R.id.et_name);
+        String assignment_name = name.getText().toString();
         addAssignment = findViewById(R.id.add);
         addAssignment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
+                intentListAssignments.putExtra("name", assignment_name);
                 MainActivity.this.startActivity(intentListAssignments);
+
             }
         });
 
