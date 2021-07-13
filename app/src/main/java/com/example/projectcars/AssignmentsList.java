@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,9 @@ public class AssignmentsList extends AppCompatActivity {
     RecyclerView content;
     ArrayList<String> assignmentList;
 
+
+    //public static final String EXTRA_DATA = "EXTRA_DATA";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +32,12 @@ public class AssignmentsList extends AppCompatActivity {
 
         //Getting the input from Main
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        String assignment = intent.getStringExtra("name");
 
+        TextView result = (TextView) findViewById(R.id.result);
+        result.setText(assignment);
+
+        /***
         content = findViewById(R.id.rv_content);
         content.setLayoutManager(new LinearLayoutManager(this));
         assignmentList = new ArrayList<String>();
@@ -37,6 +46,7 @@ public class AssignmentsList extends AppCompatActivity {
 
         AdapterData adapter = new AdapterData(assignmentList);
         content.setAdapter(adapter);
+        ***/
 
 
 

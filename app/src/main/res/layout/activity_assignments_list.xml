@@ -73,5 +73,9 @@
         android:layout_marginTop="10sp">
     </Button>
 
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

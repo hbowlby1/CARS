@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     TextView mDisplayDate;
-    EditText name;
-    Button addAssignment;
+    //EditText name;
+    //Button addAssignment;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
 
@@ -31,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        EditText name = findViewById(R.id.et_name);
+        String assignment_name = name.getText().toString();
+
+        Button addAssignment = findViewById(R.id.btn_add);
+        addAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
+                intentListAssignments.putExtra("name", assignment_name);
+                MainActivity.this.startActivity(intentListAssignments);
+
+            }
+        });
 
         // sets up the display date in the main activity
         mDisplayDate = (TextView) findViewById(R.id.getDate);
@@ -63,20 +78,5 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: date; " + month + "/" + dayOfMonth + "/" + year);
             }
         };
-
-        name = findViewById(R.id.et_name);
-        String assignment_name = name.getText().toString();
-        addAssignment = findViewById(R.id.add);
-        addAssignment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
-                intentListAssignments.putExtra("name", assignment_name);
-                MainActivity.this.startActivity(intentListAssignments);
-
-            }
-        });
-
-
     }
 }

@@ -54,7 +54,7 @@
         />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/btn_add"
         android:layout_width="154dp"
         android:layout_height="61dp"
         android:layout_marginStart="163dp"
