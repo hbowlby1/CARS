@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="77dp"
         android:layout_marginEnd="32dp"
-        android:text="Switch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tx_notif"
@@ -34,12 +33,11 @@
         android:id="@+id/sw_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:text="Switch"
+        android:layout_marginEnd="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sw_notif"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.119" />
 
     <TextView
         android:id="@+id/tx_notif"
@@ -83,8 +81,8 @@
         android:layout_height="42dp"
         android:layout_marginEnd="52dp"
         android:ems="10"
+        android:hint="days"
         android:inputType="textPersonName"
-        android:text="Days"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sw_email"
@@ -100,18 +98,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.582" />
-
-    <Button
-        android:id="@+id/bt_canvas"
-        android:layout_width="250dp"
-        android:layout_height="47dp"
-        android:text="Canvas Login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_email"
-        app:layout_constraintVertical_bias="0.22" />
 
     <Button
         android:id="@+id/bt_exit"
