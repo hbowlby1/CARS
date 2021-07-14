@@ -19,7 +19,7 @@ public class AssignmentsList extends AppCompatActivity {
     Button btn_createAssignment;
 
     RecyclerView content;
-    ArrayList<String> assignmentList;
+    ArrayList<String> assignmentList = new ArrayList<String>();
 
 
     //public static final String EXTRA_DATA = "EXTRA_DATA";
@@ -34,19 +34,15 @@ public class AssignmentsList extends AppCompatActivity {
         Intent intent = getIntent();
         String assignment = intent.getStringExtra("name");
 
-        TextView result = (TextView) findViewById(R.id.result);
-        result.setText(assignment);
-
-        /***
         content = findViewById(R.id.rv_content);
         content.setLayoutManager(new LinearLayoutManager(this));
-        assignmentList = new ArrayList<String>();
 
-        assignmentList.add(name);
+        //This is a failure try to make the list increment
+        int i = assignmentList.size();
+        assignmentList.add( i++ , assignment);
 
         AdapterData adapter = new AdapterData(assignmentList);
         content.setAdapter(adapter);
-        ***/
 
 
 

@@ -32,17 +32,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        /*** --- Seems like these lines should be inside onClick function ---
         EditText name = findViewById(R.id.et_name);
         String assignment_name = name.getText().toString();
+         ***/
 
         Button addAssignment = findViewById(R.id.btn_add);
         addAssignment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                //And here they are
+                EditText name = findViewById(R.id.et_name);
+                String assignment_name = name.getText().toString();
+
                 Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
                 intentListAssignments.putExtra("name", assignment_name);
-                MainActivity.this.startActivity(intentListAssignments);
+                startActivity(intentListAssignments);
 
             }
         });

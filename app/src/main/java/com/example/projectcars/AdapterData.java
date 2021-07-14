@@ -14,7 +14,13 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolderData
 
     ArrayList<String> assignmentList;
 
+    public AdapterData() {}
+
     public AdapterData(ArrayList<String> assignmentList) {
+        this.assignmentList = assignmentList;
+    }
+
+    public void setAssignmentList(ArrayList<String> assignmentList) {
         this.assignmentList = assignmentList;
     }
 
