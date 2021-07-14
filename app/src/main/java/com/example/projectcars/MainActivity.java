@@ -81,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                //datepicker only goes from 0-11 (0 = january and 11 = december) Adding 1 sets it
+                // like normal 1-12
+                month = month + 1;
+                //sets the date to the text view (should reset each time accessing the activity
+                String date = month + "/" + dayOfMonth + "/" + year;
+                mDisplayDate.setText(date);
+                //shows the date in log cat (for debugging purposes)
                 Log.d(TAG, "onDateSet: date; " + month + "/" + dayOfMonth + "/" + year);
             }
         };

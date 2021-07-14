@@ -63,7 +63,7 @@ public class Settings extends AppCompatActivity {
 //                        turn off emails
 
                 if(isChecked == true){
-                    //shows that it is on (on is set to 0 based on the toast length)
+                    //shows that it is on (on is set to 0)
                     Toast.makeText(getBaseContext(), "On", Toast.LENGTH_SHORT).show();
                 }else{
                     //checks that it is off and says off. It is set to 1
