@@ -37,21 +37,7 @@ public class MainActivity extends AppCompatActivity {
         String assignment_name = name.getText().toString();
          ***/
 
-        Button addAssignment = findViewById(R.id.btn_add);
-        addAssignment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                //And here they are
-                EditText name = findViewById(R.id.et_name);
-                String assignment_name = name.getText().toString();
-
-                Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
-                intentListAssignments.putExtra("name", assignment_name);
-                startActivity(intentListAssignments);
-
-            }
-        });
 
         // sets up the display date in the main activity
         mDisplayDate = (TextView) findViewById(R.id.getDate);
@@ -91,5 +77,25 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: date; " + month + "/" + dayOfMonth + "/" + year);
             }
         };
+
+
+
+        Button addAssignment = findViewById(R.id.btn_add);
+        addAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //And here they are
+                EditText name = findViewById(R.id.et_name);
+                String assignment_name = name.getText().toString();
+                String date = mDisplayDate.getText().toString();
+
+                Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
+                intentListAssignments.putExtra("name", assignment_name);
+                intentListAssignments.putExtra("date", date);
+                startActivity(intentListAssignments);
+
+            }
+        });
     }
 }

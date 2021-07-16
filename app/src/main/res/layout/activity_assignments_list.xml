@@ -15,46 +15,28 @@
         android:layout_marginTop="60sp"
         android:textSize="25sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+
+    <TextView
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:text="Name / Due date:"
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
         android:layout_marginTop="40sp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"/>
 
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Name:"/>
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Due date:"/>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="30sp"
         android:layout_marginRight="30sp"
         android:layout_marginTop="30sp"
-        android:layout_gravity="center">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_content"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/createAssignment"

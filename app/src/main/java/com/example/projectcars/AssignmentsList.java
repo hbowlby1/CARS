@@ -34,13 +34,16 @@ public class AssignmentsList extends AppCompatActivity {
         //Getting the input from Main
         Intent intent = getIntent();
         String assignment = intent.getStringExtra("name");
+        String date = intent.getStringExtra("date");
+
+        String data = assignment + " - " + date;
 
         content = findViewById(R.id.rv_content);
         content.setLayoutManager(new LinearLayoutManager(this));
 
         //This is a failure try to make the list increment
         int i = assignmentList.size();
-        assignmentList.add( i++ , assignment);
+        assignmentList.add(data);
 
         AdapterData adapter = new AdapterData(assignmentList);
         content.setAdapter(adapter);
