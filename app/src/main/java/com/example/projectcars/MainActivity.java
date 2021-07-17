@@ -90,11 +90,19 @@ public class MainActivity extends AppCompatActivity {
                 String assignment_name = name.getText().toString();
                 String date = mDisplayDate.getText().toString();
 
+                //recycler view date section variables
+//                EditText dueDates = findViewById(R.id.rv_date);
+//                String assignment_due_date = dueDates.getText().toString();
+//
                 Intent intentListAssignments = new Intent(MainActivity.this, AssignmentsList.class);
                 intentListAssignments.putExtra("name", assignment_name);
                 intentListAssignments.putExtra("date", date);
                 startActivity(intentListAssignments);
 
+                //displays the date in the recycler view edit text
+//                Intent intentListDates = new Intent(MainActivity.this, AssignmentsList.class);
+//                intentListDates.putExtra("dueDates", assignment_due_date);
+//                startActivity(intentListDates);
             }
         });
     }
