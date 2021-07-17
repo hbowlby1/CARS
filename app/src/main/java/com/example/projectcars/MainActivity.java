@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_assignments_list);
 
         /*** --- Seems like these lines should be inside onClick function ---
         EditText name = findViewById(R.id.et_name);
