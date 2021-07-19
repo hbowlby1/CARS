@@ -65,9 +65,8 @@ public class Settings extends AppCompatActivity {
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(
                             Settings.this, "Assignment Due");
 
-                    builder.setContentTitle("Assignment");
-                    builder.setContentText("Insert Assignment name here" + " is due on " +
-                            "insert date of assignment here");
+                    builder.setContentTitle("Assignment Due Soon");
+                    builder.setContentText("You have an assignment due soon.");
                     builder.setSmallIcon(R.drawable.ic_launcher_background);
                     builder.setAutoCancel(true);
 

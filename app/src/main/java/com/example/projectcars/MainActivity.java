@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assignments_list);
+        setContentView(R.layout.activity_main);
 
         /*** --- Seems like these lines should be inside onClick function ---
         EditText name = findViewById(R.id.et_name);
@@ -77,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onDateSet: date; " + month + "/" + dayOfMonth + "/" + year);
             }
         };
-
-
 
         Button addAssignment = findViewById(R.id.btn_add);
         addAssignment.setOnClickListener(new View.OnClickListener() {
